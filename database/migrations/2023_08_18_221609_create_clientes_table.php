@@ -17,9 +17,11 @@ return new class extends Migration
             $table->string('nombre',120);
             $table->date('fecha_nacimiento');
             $table->string('telefono',20);
-            $table->string('email',120);
-            $table->string('matricula',50)->nullable();
+            $table->string('email',50)->nullable();
+            $table->unsignedBigInteger('producto_id');
             $table->timestamps();
+
+            $table->foreign('producto_id')->references('id')->on('productos');
         });
     }
 

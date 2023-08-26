@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
+
+    public function producto(){
+        return $this->belongsTo(Nivel::class,'producto_id','id');
+    }
 }
