@@ -1,4 +1,4 @@
-min 25
+min 33
 
 
 # FIXME: tuve un error que no me creaba una tabla la de productos = lo solucione creando primero la tabla que va ser contenida por la segunda tabla es decir si cleinte contiene a productos entonces productos creo primero tanto el modelo como la migracion y despues clientes, pq caundo se ejecute la tabla clientes y vea que tiene un fk de productos y busque la tabla y todabia no se haya creado va tirar un error pq no va encontrar el id de referencia que apunta a esa fk
