@@ -8,7 +8,7 @@
     <div class="container py-4">
         <h1>Registrar Cliente</h1>
 
-        <form action="{{ Route('clientes.create') }}">
+        <form action="{{ url('clientes') }}">
             @csrf
             @method('post')
 
@@ -51,9 +51,13 @@
                 <label for="productos" class="col-sm-2 col-form-label">Lista de productos</label>
                 <div class="col-sm-5">
                     <textarea type="email" class="form-control" name="email" id="email" cols="30" rows="10">{{ old('productos') }}</textarea>
-                   
+
                 </div>
             </div>
+
+            <a href="{{ url('clientes') }}" class="btn btn-secondary">Regresar</a>
+
+            <button type="submit" class="btn btn-success">Guardar</button>
 
         </form>
     </div>

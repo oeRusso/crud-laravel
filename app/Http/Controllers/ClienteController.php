@@ -28,7 +28,9 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'matricula' => 'required | unique:clientes|max:10',
+        ]);
     }
 
     /**
