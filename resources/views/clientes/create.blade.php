@@ -7,6 +7,19 @@
 <main>
     <div class="container py-4">
         <h1>Registrar Cliente</h1>
+        @if (errors->any())
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <ul>
+                @foreach ($erros->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+
+            </ul>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+        @endif
 
         <form action="{{ url('clientes') }}">
             @csrf
@@ -43,7 +56,7 @@
             <div class="mb-3 row">
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-5">
-                    <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
+                    <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
                 </div>
             </div>
 

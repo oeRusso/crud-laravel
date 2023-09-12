@@ -30,6 +30,13 @@ class ClienteController extends Controller
     {
         $request->validate([
             'matricula' => 'required | unique:clientes|max:10',
+            'nombre' => 'required|max:255',
+            'fecha' => 'required|date',
+            'telefono' => 'nullable',
+            'email' => 'nullable|email',
+            'producto' => 'required'
+
+
         ]);
     }
 
