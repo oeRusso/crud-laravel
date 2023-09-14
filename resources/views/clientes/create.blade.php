@@ -21,14 +21,14 @@
 
         @endif
 
-        <form action="{{ url('clientes') }}">
+        <form action="{{ url('clientes') }}" method="post">
             @csrf
-            @method('post')
+
 
             <div class="mb-3 row">
                 <label for="matricula" class="col-sm-2 col-form-label">Matricula</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="matricula" id="matricula" value="{{ old('matricula') }}" >
+                    <input type="text" class="form-control" name="matricula" id="matricula" value="{{ old('matricula') }}" required>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
             <div class="mb-3 row">
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" >
+                    <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" required >
                 </div>
             </div>
 

@@ -35,9 +35,20 @@ class ClienteController extends Controller
             'telefono' => 'nullable',
             'email' => 'nullable|email',
             'producto' => 'required'
-
-
         ]);
+
+        $cliente = new Cliente();
+
+        $cliente->matricula = $request->input('matricula');
+        $cliente->nombre = $request->input('nombre');
+        $cliente->fecha_nacimiento = $request->input('fecha');
+        $cliente->telefono = $request->input('telefono');
+        $cliente->email = $request->input('email');
+        $cliente->producto_id = $request->input('producto');
+        $cliente->save();
+
+        return view('clientes.message', ['msg' => 'Registro guardado']);
+
     }
 
     /**
