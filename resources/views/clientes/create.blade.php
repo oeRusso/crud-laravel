@@ -7,10 +7,10 @@
 <main>
     <div class="container py-4">
         <h1>Registrar Cliente</h1>
-        @if (errors->any())
+        @if ($errors->any())
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <ul>
-                @foreach ($erros->all() as $error)
+                @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
                 @endforeach
 
@@ -28,7 +28,7 @@
             <div class="mb-3 row">
                 <label for="matricula" class="col-sm-2 col-form-label">Matricula</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="matricula" id="matricula" value="{{ old('matricula') }}" required>
+                    <input type="text" class="form-control" name="matricula" id="matricula" value="{{ old('matricula') }}" >
                 </div>
             </div>
 
@@ -56,14 +56,14 @@
             <div class="mb-3 row">
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
+                    <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" >
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="productos" class="col-sm-2 col-form-label">Lista de productos</label>
+                <label for="producto" class="col-sm-2 col-form-label">Lista de productos</label>
                 <div class="col-sm-5">
-                    <textarea type="email" class="form-control" name="email" id="email" cols="30" rows="10">{{ old('productos') }}</textarea>
+                    <textarea type="text" class="form-control" name="producto" id="productos" cols="30" rows="10">{{ old('producto') }}</textarea>
 
                 </div>
             </div>

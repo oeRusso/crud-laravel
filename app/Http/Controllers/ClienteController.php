@@ -29,7 +29,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'matricula' => 'required | unique:clientes|max:10',
+            'matricula' => 'required|unique:clientes|max:10',
             'nombre' => 'required|max:255',
             'fecha' => 'required|date',
             'telefono' => 'nullable',
