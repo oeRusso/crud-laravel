@@ -22,7 +22,16 @@ class ProductoSeeder extends Seeder
             DB::table('productos')->insert([
                 'nombre' => $productos[$i],
                 'precio' => $precios[$i]
-            ]);  //aqui itero hasta que el contador $i sea menos a la cantidad de elementos del array de productosy son los mismos que el del array de precio. entonces luego voy asignando cada campo de mi bd con los arrays en el indice $i ey eso ira cargando a medida que vaya recorriendo el arreglo al campo correspondiente los datos
+            ]);
+
+
+
+
+
+
+
+
+            //aqui itero hasta que el contador $i sea menos a la cantidad de elementos del array de productosy son los mismos que el del array de precio. entonces luego voy asignando cada campo de mi bd con los arrays en el indice $i ey eso ira cargando a medida que vaya recorriendo el arreglo al campo correspondiente los datos
         }
     }
 }

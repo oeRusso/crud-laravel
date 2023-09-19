@@ -63,7 +63,7 @@
             <div class="mb-3 row">
                 <label for="producto" class="col-sm-2 col-form-label">Lista de productos</label>
                 <div class="col-sm-5">
-                    <textarea type="text" class="form-control" name="producto" id="productos" cols="30" rows="10">{{ old('producto') }}</textarea>
+                    <textarea type="text" class="form-control" name="producto" id="producto" cols="30" rows="10">{{ old('producto') }}</textarea>
 
                 </div>
             </div>

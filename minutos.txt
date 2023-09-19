@@ -1,5 +1,10 @@
-min 45
-# FIXME: tengo un bug cuando guardo y es en los productos, ya que en ese campo apunto a la fk de la tabla productos dentro de la tabla de clientes, verificar eso
+min 50
+# FIXME: osea aca tengo que hacer una tabla intermedia entre producto y cliente llamado compras donde debe tener el id de la compra mas los 2 id tanto de producto como de cliente, el tema es que no se como enlazar o como poner en el modelo esas relaciones y tampoco se en que parte hago las validaciones para los datos del cliente y donde las validaciones para el producto. hay que pensar que si las validaciones para los datos del cliente hago en cliente controller debo hacer otro controlador de la compra y ahi inserto los productos? o solo hago lo hago todo en el cliente pero desde ahi, como relaciono el cliente con el producto y la compra?
 
 
 #tuve un error que no me creaba una tabla la de productos = lo solucione creando primero la tabla que va ser contenida por la segunda tabla es decir si cleinte contiene a productos entonces productos creo primero tanto el modelo como la migracion y despues clientes, pq caundo se ejecute la tabla clientes y vea que tiene un fk de productos y busque la tabla y todabia no se haya creado va tirar un error pq no va encontrar el id de referencia que apunta a esa fk
+
+
+# SELECTORES MULTIPLES...
+
+# ESTABLECER LA RELACION DE UNO  A MUCHOS

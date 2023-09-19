@@ -45,6 +45,7 @@ class ClienteController extends Controller
         $cliente->telefono = $request->input('telefono');
         $cliente->email = $request->input('email');
         $cliente->producto_id = $request->input('producto');
+        
         $cliente->save();
 
         return view('clientes.message', ['msg' => 'Registro guardado']);
