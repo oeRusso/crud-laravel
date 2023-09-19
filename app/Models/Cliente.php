@@ -10,6 +10,6 @@ class Cliente extends Model
     use HasFactory;
 
     public function producto(){
-        return $this->belongsTo(Nivel::class,'producto_id','id');
+        return $this->hasMany(Producto::class);
     }
 }
